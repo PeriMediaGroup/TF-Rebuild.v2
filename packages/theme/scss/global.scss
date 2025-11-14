@@ -1,0 +1,12 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "../fonts/BlackOpsOne.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--tf-background);
+  color: var(--tf-text);
+  font-family: Arial, sans-serif;
+}

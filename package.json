@@ -1,0 +1,11 @@
+{
+  "name": "tf-rebuild-v2",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "turbo": "latest"
+  }
+}

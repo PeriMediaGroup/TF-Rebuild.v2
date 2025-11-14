@@ -1,0 +1,11 @@
+.tf-header {
+  background: var(--tf-gunmetal);
+  border-bottom: 1px solid var(--tf-crimson);
+  padding: 1rem;
+}
+
+.tf-header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
