@@ -1,0 +1,24 @@
+.tf-page {
+  width: 100%;
+  min-height: calc(100vh - 120px); /* account for header/footer */
+  padding: 2rem;
+  background: var(--tf-background);
+  color: var(--tf-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.tf-page__header {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--tf-crimson);
+  font-family: "Black Ops One", sans-serif;
+}
+
+.tf-page__content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

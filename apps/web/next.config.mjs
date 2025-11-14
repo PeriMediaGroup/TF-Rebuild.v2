@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {}
+  experimental: {},
+  webpack: (config) => {
+    config.infrastructureLogging = { level: "error" };
+    return config;
+  }
 };
 
 export default nextConfig;
