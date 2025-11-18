@@ -1,13 +1,34 @@
-@import "./reset.scss";
-@import "./variables.scss";
-@import "./mixins.scss";
-@import "../fonts/BlackOpsOne.css";
-@import "./layout.scss";
+@use "./reset.scss";
+@use "./variables.scss";
+@use "./mixins.scss";
+@use "./layout.scss";
+@use "./typography.scss";
+
+html,
+body {
+  font-family: var(--font-tomorrow), sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
   background: var(--tf-background);
   color: var(--tf-text);
-  font-family: Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-blackopsone), sans-serif;
+  font-weight: normal;
+}
+
+a {
+  font-family: var(--font-tomorrow), sans-serif;
+  font-weight: medium;
+  text-decoration: none;
+  color: var(--tf-steel-blue);
+  &:hover {
+    color: var(--tf-steel-blue-light);
+  }
 }

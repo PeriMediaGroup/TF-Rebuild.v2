@@ -1,4 +1,8 @@
 .tf-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-family: var(--font-tomorrow), sans-serif;
   background: var(--tf-gunmetal);
   border-bottom: 1px solid var(--tf-crimson);
   padding: 1rem;

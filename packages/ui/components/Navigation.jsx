@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 
-export default function Navigation() {
+export default function Navigation({ links = [] }) {
   return (
     <nav className="tf-nav">
-      <Link href="/">Main</Link>
-      <Link href="/friends">Friends</Link>
-      <Link href="/trending">Trending</Link>
-      <Link href="/profile">Profile</Link>
+      {links.map((item) => (
+        <Link key={item.href} href={item.href}>
+          {item.label}
+        </Link>
+      ))}
     </nav>
   );
 }

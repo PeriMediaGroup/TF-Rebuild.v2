@@ -1,12 +1,3 @@
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/theme/fonts/BlackOpsOne.css ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-@font-face {
-  font-family: "Black Ops One";
-  src: url("https://fonts.gstatic.com/s/blackopsone/v23/qWcsB6-YPo7xBdrFfQ9G9yEIOLED.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/theme/scss/global.scss ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -17,16 +8,13 @@
 }
 
 :root {
-  --tf-black: #1c1c1c;
   --tf-gunmetal: #2a3439;
+  --tf-steel-blue: #4AA3FF;
+  --tf-steel-blue-light: #82C4FF;
   --tf-crimson: #b22222;
   --tf-gray: #a9a9a9;
   --tf-background: #1c1c1c;
   --tf-text: #ffffff;
-  --tf-accent: #b22222;
-  /* TYPOGRAPHY */
-  --font-display: var(--font-title, 'Black Ops One', 'Impact', 'Arial Black', system-ui);
-  --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   /* SPACING */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
@@ -43,7 +31,7 @@
 
 .tf-page {
   width: 100%;
-  min-height: calc(100vh - 120px); /* account for header/footer */
+  min-height: calc(100vh - 133px); /* account for header/footer */
   padding: 2rem;
   background: var(--tf-background);
   color: var(--tf-text);
@@ -66,17 +54,307 @@
   margin: 0 auto;
 }
 
+body, html {
+  font-family: var(--font-tomorrow), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--tf-gray);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-tomorrow), sans-serif;
+  margin: 0 0 0.75rem;
+  color: #fff;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tf-heading-blackops {
+  font-family: var(--font-blackopsone), sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: var(--tf-gray);
+}
+
+small {
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+a {
+  color: #4AA3FF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #82C4FF;
+}
+
+a:active {
+  color: #B22222;
+}
+
+.text-muted {
+  color: #888;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  background: #1f272c;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+html,
+body {
+  font-family: var(--font-tomorrow), sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: var(--tf-background);
   color: var(--tf-text);
-  font-family: Arial, sans-serif;
 }
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-blackopsone), sans-serif;
+  font-weight: normal;
+}
+
+a {
+  font-family: var(--font-tomorrow), sans-serif;
+  font-weight: medium;
+  text-decoration: none;
+  color: var(--tf-steel-blue);
+}
+a:hover {
+  color: var(--tf-steel-blue-light);
+}
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[3].use[1]!../../node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[3].use[2]!../../node_modules/next/font/local/target.css?{"path":"..\\..\\packages\\theme\\index.js","import":"","arguments":[{"src":[{"path":"./fonts/BlackOpsOne/BlackOpsOne-Regular.ttf","weight":"400"}],"variable":"--font-blackopsone"}],"variableName":"blackOpsOne"} ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+font-family: 'blackOpsOne';
+src: url(/_next/static/media/becca6b6a2000d06-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 400;
+}@font-face {font-family: 'blackOpsOne Fallback';src: local("Arial");ascent-override: 74.46%;descent-override: 27.42%;line-gap-override: 0.00%;size-adjust: 122.69%
+}.__className_6d92a8 {font-family: 'blackOpsOne', 'blackOpsOne Fallback';font-weight: 400
+}.__variable_6d92a8 {--font-blackopsone: 'blackOpsOne', 'blackOpsOne Fallback'
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[3].use[1]!../../node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[3].use[2]!../../node_modules/next/font/local/target.css?{"path":"..\\..\\packages\\theme\\index.js","import":"","arguments":[{"src":[{"path":"./fonts/Tomorrow/Tomorrow-Thin.ttf","weight":"100"},{"path":"./fonts/Tomorrow/Tomorrow-ThinItalic.ttf","weight":"100","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-ExtraLight.ttf","weight":"200"},{"path":"./fonts/Tomorrow/Tomorrow-ExtraLightItalic.ttf","weight":"200","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-Light.ttf","weight":"300"},{"path":"./fonts/Tomorrow/Tomorrow-LightItalic.ttf","weight":"300","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-Regular.ttf","weight":"400"},{"path":"./fonts/Tomorrow/Tomorrow-Italic.ttf","weight":"400","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-Medium.ttf","weight":"500"},{"path":"./fonts/Tomorrow/Tomorrow-MediumItalic.ttf","weight":"500","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-SemiBold.ttf","weight":"600"},{"path":"./fonts/Tomorrow/Tomorrow-SemiBoldItalic.ttf","weight":"600","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-Bold.ttf","weight":"700"},{"path":"./fonts/Tomorrow/Tomorrow-BoldItalic.ttf","weight":"700","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-ExtraBold.ttf","weight":"800"},{"path":"./fonts/Tomorrow/Tomorrow-ExtraBoldItalic.ttf","weight":"800","style":"italic"},{"path":"./fonts/Tomorrow/Tomorrow-Black.ttf","weight":"900"},{"path":"./fonts/Tomorrow/Tomorrow-BlackItalic.ttf","weight":"900","style":"italic"}],"variable":"--font-tomorrow"}],"variableName":"tomorrow"} ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/499de8d359df69e6-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 100;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/cf407f43a72eb0d0-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 100;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/38272518d5ba8863-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 200;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/9b0ff6355bd57d2f-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 200;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/6f89b5eb5f0fe729-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 300;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/ec1a1b7ea316cdd8-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 300;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/84aaef184fc47bef-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 400;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/aff3e1cec3b7db98-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 400;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/f97ed502f0710f85-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 500;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/03f151d62de1fa05-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 500;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/bb2236f9d54004e3-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 600;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/6dd476afb2ab8324-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 600;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/707c151291494560-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 700;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/fc35e343961982a4-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 700;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/fa579a810fe8ee95-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 800;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/f4d38c241e8dfddf-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 800;
+font-style: italic;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/768be2364cb95d04-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 900;
+}
+
+@font-face {
+font-family: 'tomorrow';
+src: url(/_next/static/media/b7a2b17d6d10a6e6-s.p.ttf) format('truetype');
+font-display: swap;
+font-weight: 900;
+font-style: italic;
+}@font-face {font-family: 'tomorrow Fallback';src: local("Arial");ascent-override: 92.24%;descent-override: 18.45%;line-gap-override: 0.00%;size-adjust: 108.41%
+}.__className_ef9623 {font-family: 'tomorrow', 'tomorrow Fallback'
+}.__variable_ef9623 {--font-tomorrow: 'tomorrow', 'tomorrow Fallback'
+}
+
 /*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/ui/scss/header.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .tf-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-family: var(--font-tomorrow), sans-serif;
   background: var(--tf-gunmetal);
   border-bottom: 1px solid var(--tf-crimson);
   padding: 1rem;
@@ -91,9 +369,8 @@ body {
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/ui/scss/footer.scss ***!
   \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .tf-footer {
+  font-family: var(--font-tomorrow), sans-serif;
   background: var(--tf-gunmetal);
-  color: var(--tf-gray);
-  text-align: center;
   padding: 1rem;
   border-top: 1px solid var(--tf-crimson);
   font-size: 0.9rem;
@@ -105,6 +382,8 @@ body {
   display: flex;
   gap: 1rem;
   align-items: center;
+  font-weight: 600;
+  font-style: italic;
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/ui/scss/logo.scss ***!
@@ -117,9 +396,9 @@ body {
   min-height: 50px;
 }
 .tf-logo__text {
-  font-family: "Black Ops One", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--font-blackopsone);
   color: #FFF;
-  font-size: 1.6rem;
+  font-size: 2.25rem;
   margin-left: 65px;
   text-decoration: none;
 }

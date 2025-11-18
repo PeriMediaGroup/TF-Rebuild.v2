@@ -1,0 +1,151 @@
+// ----------------------------------------
+// TYPOGRAPHY SYSTEM — TriggerFeed Theme
+// ----------------------------------------
+
+// BASE FONT FAMILY
+body, html {
+  font-family: var(--font-tomorrow), sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--tf-gray);
+}
+
+// ----------------------------------------
+// HEADINGS (Tomorrow family)
+// ----------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-tomorrow), sans-serif;
+  margin: 0 0 0.75rem;
+  color: #fff;
+}
+
+
+// H1 – Large Page Title
+h1 {
+  font-weight: 700; // Bold
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
+}
+
+// H2 – Section Title
+h2 {
+  font-weight: 600; // SemiBold
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+// H3 – Subsection
+h3 {
+  font-weight: 500; // Medium
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+
+// H4 – UI Titles (cards, modals)
+h4 {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+// H5 – Smaller Labels
+h5 {
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+// H6 – Tiny Labels
+h6 {
+  font-weight: 300;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+// ----------------------------------------
+// BLACK OPS ONE SPECIAL HEADINGS
+// ----------------------------------------
+
+// Use for logo, hero banners, or special featured text
+.tf-heading-blackops {
+  font-family: var(--font-blackopsone), sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+
+// ----------------------------------------
+// BODY TEXT
+// ----------------------------------------
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: var(--tf-gray);
+}
+
+small {
+  font-size: 0.85rem;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+
+// ----------------------------------------
+// LINKS
+// ----------------------------------------
+a {
+  color: #4AA3FF; // Steel Blue link
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #82C4FF; // Lighter steel blue
+}
+
+a:active {
+  color: #B22222; // Crimson accent tap
+}
+
+
+// ----------------------------------------
+// SPECIAL TEXT STYLES
+// ----------------------------------------
+
+// Muted / Secondary
+.text-muted {
+  color: #888;
+}
+
+// Bold Callout
+.text-bold {
+  font-weight: 700;
+}
+
+// Italic
+.text-italic {
+  font-style: italic;
+}
+
+// Uppercase Label
+.text-label {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+// ----------------------------------------
+// CODE TEXT
+// ----------------------------------------
+code {
+  font-family: "Courier New", monospace;
+  background: #1f272c;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+}

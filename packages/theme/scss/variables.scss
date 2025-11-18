@@ -1,16 +1,11 @@
 :root {
-  --tf-black: #1c1c1c;
   --tf-gunmetal: #2a3439;
+  --tf-steel-blue: #4AA3FF;
+  --tf-steel-blue-light: #82C4FF;
   --tf-crimson: #b22222;
   --tf-gray: #a9a9a9;
   --tf-background: #1c1c1c;
   --tf-text: #ffffff;
-  --tf-accent: #b22222;
-
-
-  /* TYPOGRAPHY */
-  --font-display: var(--font-title, 'Black Ops One', 'Impact', 'Arial Black', system-ui);
-  --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 
   /* SPACING */
   --space-xs: 0.25rem;

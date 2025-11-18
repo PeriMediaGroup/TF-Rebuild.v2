@@ -5,9 +5,9 @@
   background-repeat: no-repeat;
   min-height: 50px;
   &__text {
-    font-family: "Black Ops One", Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-blackopsone);
     color: #FFF;
-    font-size: 1.6rem;
+    font-size: 2.25rem;
     margin-left: 65px;
     text-decoration: none;
   }

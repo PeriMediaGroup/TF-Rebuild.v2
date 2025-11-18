@@ -1,6 +1,17 @@
 {
   "name": "@triggerfeed/theme",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
-  "private": false
+  "files": [
+    "index.js",
+    "scss/",
+    "fonts/"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./index": "./index.js",
+    "./scss/*": "./scss/*",
+    "./fonts/*": "./fonts/*"
+  }
 }

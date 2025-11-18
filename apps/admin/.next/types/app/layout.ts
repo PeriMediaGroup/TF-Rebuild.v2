@@ -1,4 +1,4 @@
-// File: C:\TF\V3\TF-Rebuild.v2\apps\admin\src\app\layout.js
+// File: C:\TF\TF-Rebuild.v2\apps\admin\src\app\layout.js
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
