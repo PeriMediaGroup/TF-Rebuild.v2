@@ -1,6 +1,7 @@
 export const navLinks = [
-  { href: "/admin", label: "Admin" },
-  { href: "/notifications", label: "Notifications" },
-  { href: "/flags", label: "Flags" },
-  { href: "/other", label: "Other" }
+  { label: "Dashboard", href: "/" },
+  { label: "Users", href: "/users" },
+  { label: "Flagged Posts", href: "/flagged" },
+  { label: "Moderation Logs", href: "/logs" },
+  { label: "Settings", href: "/settings" }
 ];

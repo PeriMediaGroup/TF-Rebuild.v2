@@ -1,0 +1,65 @@
+.tf-about {
+  padding: 2rem;
+
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  &__columns {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    flex: 1 1 300px;
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  &__col--support {
+    max-width: 400px;
+  }
+
+  &__list {
+    margin: 1rem 0 2rem 1.2rem;
+    line-height: 1.7;
+    list-style: none;
+
+    &.small li {
+      font-size: 0.9rem;
+      opacity: 0.85;
+    }
+  }
+
+  &__qr {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  &__support-text {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  &__support-link {
+    color: #B22222;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__support-note {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+}
