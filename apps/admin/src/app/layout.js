@@ -1,7 +1,8 @@
+/* app/layout.js */
+
 import "@triggerfeed/theme/scss/global.scss";
-import { tomorrow } from "@triggerfeed/theme";
-import { Header, Footer } from "@triggerfeed/ui";
-import { navLinks } from "../../navLinks";
+import { tomorrow, blackOpsOne } from "@triggerfeed/theme";
+import { AuthProvider } from "../auth/AuthContext";
 
 export const metadata = {
   title: "TriggerFeed Admin",
@@ -11,10 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${tomorrow.variable}`}>
-        <Header links={navLinks} />
-        <main className="tf-page">{children}</main>
-        <Footer />
+      <body className={`${tomorrow.variable} ${blackOpsOne.variable}`}>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

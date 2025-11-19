@@ -3,5 +3,6 @@ export const navLinks = [
   { href: "/about", label: "About" },
   { href: "/install", label: "Install Guide" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy" }
+  { href: "/legal", label: "Legal" },
+  { href: "https://app.triggerfeed.com/signup", label: "Sign Up" }
 ];

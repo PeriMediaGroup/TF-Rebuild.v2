@@ -375,6 +375,9 @@ font-style: italic;
   border-top: 1px solid var(--tf-crimson);
   font-size: 0.9rem;
 }
+.tf-footer p {
+  margin-bottom: 0;
+}
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/ui/scss/nav.scss ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -384,6 +387,25 @@ font-style: italic;
   align-items: center;
   font-weight: 600;
   font-style: italic;
+}
+
+.tf-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+.tf-nav a {
+  color: var(--tf-steel-blue);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s ease color, 0.2s ease border-color;
+}
+.tf-nav a.active {
+  color: var(--tf-text);
+  border-bottom-color: var(--tf-text);
+}
+.tf-nav a:hover {
+  color: var(--tf-steel-blue-light);
 }
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!../../packages/ui/scss/logo.scss ***!
@@ -401,4 +423,272 @@ font-style: italic;
   font-size: 2.25rem;
   margin-left: 65px;
   text-decoration: none;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./src/styles/pages.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page h1 {
+  margin-bottom: 1rem;
+}
+.page h2 {
+  margin-top: 2rem;
+}
+.page .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.page .contact-form input,
+.page .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+.page .contact-form button {
+  padding: 0.75rem;
+  background: #b22222;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.tf-home {
+  padding: 2rem;
+  color: #fff;
+}
+.tf-home section {
+  margin-bottom: 4rem;
+}
+
+.tf-home section {
+  padding: 4rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
+}
+
+.tf-home section:nth-of-type(odd) {
+  background: #262626; /* slightly darker contrast block */
+  border: 1px solid #333;
+}
+
+/* HERO */
+.tf-home__hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.tf-home__hero .tf-home__title {
+  font-size: 4rem;
+  font-family: var(--font-blackopsone), sans-serif;
+}
+.tf-home__hero .tf-home__tagline {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+.tf-home__hero .tf-home__sub {
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+.tf-home__hero .tf-home__cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.tf-home__hero .tf-home__badges {
+  margin-top: 2rem;
+}
+.tf-home__hero .tf-home__badges img {
+  width: 180px;
+  margin: 0 0.5rem;
+}
+
+/* VALUE PROPS */
+.tf-home__values {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+}
+.tf-home__values .value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 220px;
+  padding: 2em;
+  border: 2px solid black;
+  border-radius: 25px;
+  background: var(--tf-gunmetal);
+  color: var(--tf-black);
+}
+
+/* PREVIEW */
+.tf-home__preview {
+  text-align: center;
+}
+.tf-home__preview .preview-grid {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.tf-home__preview .preview-grid img {
+  max-width: 215px;
+}
+
+/* TRENDING */
+.tf-home__trending {
+  text-align: center;
+}
+.tf-home__trending .trending-grid {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.tf-home__trending .trending-grid .trending-item {
+  background: #222;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+}
+.tf-home__trending .coming-soon-note {
+  margin-top: 1rem;
+  opacity: 0.6;
+}
+
+/* LEGAL */
+.tf-home__legal {
+  text-align: center;
+}
+.tf-home__legal ul {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.tf-home__legal ul li {
+  margin: 0.5rem 0;
+}
+.tf-home__legal ul a {
+  color: #b22222;
+  text-decoration: none;
+}
+.tf-home__legal ul a:hover {
+  opacity: 0.7;
+}
+
+/* FINAL CTA */
+.tf-home__final {
+  text-align: center;
+}
+.tf-home__final .tf-home__cta {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.google-image {
+  max-width: 180px;
+}
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[11].use[3]!../../node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[11].use[4]!../../node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[11].use[5]!./src/styles/sections/legal.scss ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.legal-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.legal-layout .legal-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 147px;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-self: flex-start;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 1.5rem;
+}
+.legal-layout .legal-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.legal-layout .legal-sidebar li {
+  margin-bottom: 1rem;
+}
+.legal-layout .legal-sidebar a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+.legal-layout .legal-sidebar a:hover {
+  color: #fff;
+}
+.legal-layout .legal-content {
+  flex: 1 1;
+}
+.legal-layout .legal-content section {
+  margin-bottom: 4rem;
+}
+.legal-layout .legal-content hr {
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  margin: 3rem 0;
+}
+
+.report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.report-form .form-row {
+  display: flex;
+  flex-direction: column;
+}
+.report-form .form-row label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.report-form .form-row input,
+.report-form .form-row textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #111;
+  color: #fff;
+  resize: vertical;
+}
+.report-form .submit-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #B22222;
+  color: #fff;
+  cursor: pointer;
+}
+.report-form .submit-btn:hover {
+  background: rgb(199.4103773585, 38.0896226415, 38.0896226415);
+}
+
+.abuse-note {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.legal-content section {
+  scroll-margin-top: 147px;
 }

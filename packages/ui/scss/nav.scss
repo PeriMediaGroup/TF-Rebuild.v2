@@ -5,3 +5,25 @@
   font-weight: 600;
   font-style: italic;
 }
+
+.tf-nav {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    color: var(--tf-steel-blue);
+    text-decoration: none;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s ease color, 0.2s ease border-color;
+
+    &.active {
+      color: var(--tf-text);
+      border-bottom-color: var(--tf-text); // crimson
+    }
+
+    &:hover {
+      color: var(--tf-steel-blue-light);
+    }
+  }
+}

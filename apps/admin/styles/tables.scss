@@ -1,0 +1,21 @@
+.table {
+    width: 100%;
+    &__actions {
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn {
+        padding: 3px;
+    }
+    th {
+        text-align: left;
+    }
+}
+
+.table__row--section-end {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.2); // subtle divider
+}
+
+.table__row--section-end td {
+  padding-bottom: 12px; // a little breathing room
+}

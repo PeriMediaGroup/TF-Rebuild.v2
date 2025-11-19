@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/(admin)/page": "app/(admin)/page.js",
+  "/(public)/not-authorized/page": "app/(public)/not-authorized/page.js",
+  "/(admin)/users/page": "app/(admin)/users/page.js",
+  "/(public)/login/page": "app/(public)/login/page.js",
+  "/(admin)/flagged/page": "app/(admin)/flagged/page.js"
 }
