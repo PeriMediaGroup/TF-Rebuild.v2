@@ -1,0 +1,14 @@
+{
+  "build": {
+    "env": {
+      "VERCEL_ARTIFACTS_READ": "1"
+    }
+  },
+  "workspaces": {
+    "packages": [
+      "apps/web",
+      "packages/theme",
+      "packages/ui"
+    ]
+  }
+}
