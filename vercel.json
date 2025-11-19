@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "VERCEL_ARTIFACTS_READ": "1"
-    }
-  }
-}
