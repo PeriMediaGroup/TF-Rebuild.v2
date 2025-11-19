@@ -1,3 +1,9 @@
 {
-  "/page": "app/page.js"
+  "/api/report-abuse/route": "app/api/report-abuse/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/install/page": "app/install/page.js",
+  "/legal/page": "app/legal/page.js"
 }
