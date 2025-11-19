@@ -1,3 +1,5 @@
+import "../styles/sections/home.scss";
+
 export default function HomePage() {
   return (
     <div className="tf-home tf-page__content">
