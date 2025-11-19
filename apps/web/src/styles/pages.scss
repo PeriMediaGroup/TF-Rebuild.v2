@@ -1,215 +1,130 @@
-/* ------------------------------------------
-   Global Page Styles (Mobile-First)
-------------------------------------------- */
-
-.tf-page {
-  padding: 2rem 1.25rem;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #ddd;
-}
-
-/* ------------------------------------------
-   HOME PAGE – HERO
-------------------------------------------- */
-
-.tf-home__hero {
-  text-align: center;
-  padding: 2rem 1.25rem 1.5rem;
-
-  .tf-home__title {
-    font-size: 2.2rem;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+.page {
+  h1 {
+    margin-bottom: 1rem;
   }
 
-  .tf-home__tagline {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #aaa;
+  h2 {
+    margin-top: 2rem;
   }
 
-  .tf-home__sub {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-    color: #bbb;
-  }
-
-  .tf-home__cta {
+  .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-
-    .btn {
-      width: 100%;
-      padding: 0.85rem 1.25rem;
-      border-radius: 6px;
-      text-align: center;
-      font-weight: 600;
-    }
-  }
-
-  .tf-home__badges {
-    display: flex;
-    justify-content: center;
     gap: 1rem;
+    margin: 2rem 0;
 
-    img {
-      height: 45px;
-      width: auto;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .tf-home__hero {
-    padding: 4rem 2rem;
-
-    .tf-home__title {
-      font-size: 3.5rem;
-    }
-
-    .tf-home__cta {
-      flex-direction: row;
-
-      .btn {
-        width: auto;
-      }
-    }
-
-    .tf-home__badges img {
-      height: 55px;
-    }
-  }
-}
-
-/* ------------------------------------------
-   HOME PAGE – VALUE CARDS
-------------------------------------------- */
-
-.tf-home__values {
-  padding: 2rem 1.25rem;
-  display: grid;
-  gap: 1.25rem;
-
-  .value {
-    background: #222;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-
-    h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-    }
-    p {
-      color: #aaa;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .tf-home__values {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ------------------------------------------
-   HOME PAGE – PREVIEW SWIPE SECTION
-------------------------------------------- */
-
-.tf-home__preview {
-  padding: 2rem 1.25rem;
-
-  .preview-grid {
-    display: flex;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1rem 0;
-    scroll-snap-type: x mandatory;
-
-    img {
-      width: 80%;
-      flex: 0 0 80%;
-      border-radius: 12px;
-      scroll-snap-align: center;
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .tf-home__preview .preview-grid {
-    overflow-x: unset;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-
-    img {
+    input,
+    textarea {
       width: 100%;
-      flex: unset;
+      padding: 0.75rem;
+      background: #111;
+      color: #fff;
+      border: 1px solid #333;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 0.75rem;
+      background: #b22222;
+      color: white;
+      border: none;
+      border-radius: 4px;
     }
   }
 }
 
-/* ------------------------------------------
-   HOME PAGE – TRENDING SECTION
-------------------------------------------- */
+// HOMEPAGE STUFF
+.tf-home {
+  padding: 2rem;
+  color: #fff;
 
+  section {
+    margin-bottom: 4rem;
+  }
+}
+
+/* TRENDING */
 .tf-home__trending {
-  padding: 2rem 1.25rem;
-
-  .tf-home__trending-title {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    font-weight: 700;
-  }
+  text-align: center;
 
   .trending-grid {
+    margin-top: 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    justify-content: center;
 
     .trending-item {
-      background: #1e1e1e;
-      border-radius: 10px;
-      padding: 1.25rem;
+      background: #222;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 200px;
       text-align: center;
+    }
+  }
 
-      h4 {
-        margin-bottom: 0.25rem;
-      }
+  .coming-soon-note {
+    margin-top: 1rem;
+    opacity: 0.6;
+  }
+}
 
-      p {
-        color: #aaa;
-        font-size: 0.9rem;
+/* LEGAL */
+.tf-home__legal {
+  text-align: center;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 1rem;
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #b22222;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
 }
 
-@media (min-width: 768px) {
-  .tf-home__trending .trending-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+/* FINAL CTA */
+.tf-home__final {
+  text-align: center;
+
+  .tf-home__cta {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
   }
 }
 
-/* ------------------------------------------
-   HOME PAGE – LEGAL
-------------------------------------------- */
+.google-image {
+  max-width: 180px;
+}
+
+/* MOBILE BREAKPOINT */
+@media (max-width: 768px) {
+  .tf-home {
+    padding: 0;
+  }
+  .tf-home__hero {
+    .tf-home__title {
+      font-size: 2.5rem;
+    }
+  }
+}
+
 
 .tf-home__legal {
   padding: 2rem 1.25rem;
-  text-align: center;
-
-  .tf-home__legal-title {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-  }
 
   .tf-home__legal-list {
     display: flex;
@@ -219,81 +134,7 @@
 
     a {
       color: var(--tf-accent-gray);
-      font-size: 0.95rem;
     }
   }
 }
 
-/* ------------------------------------------
-   GENERIC PAGE SECTIONS (About, Install, Contact)
-------------------------------------------- */
-
-.tf-section {
-  padding: 2rem 1.25rem;
-  max-width: 900px;
-  margin: 0 auto;
-
-  h1,
-  h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  p {
-    line-height: 1.5;
-    color: #ccc;
-    margin-bottom: 1rem;
-  }
-}
-
-/* Legal Page Sidebar */
-.legal-layout {
-  display: flex;
-  gap: 2rem;
-}
-
-.legal-sidebar {
-  position: sticky;
-  top: 147px;
-  width: 180px;
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    li a {
-      display: block;
-      padding: 0.5rem 0;
-      color: #ccc;
-    }
-  }
-}
-
-.legal-content {
-  flex: 1;
-}
-
-/* MOBILE OVERRIDE */
-@media (max-width: 768px) {
-  .legal-layout {
-    flex-direction: column;
-  }
-
-  .legal-sidebar {
-    width: 100%;
-    position: relative;
-    top: 0;
-
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    li a {
-      padding: 0.4rem 0.6rem;
-      background: #222;
-      border-radius: 6px;
-    }
-  }
-}
