@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@triggerfeed/theme": ["packages/theme"],
+      "@triggerfeed/ui": ["packages/ui"]
+    }
+  }
+}
