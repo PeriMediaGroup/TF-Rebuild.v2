@@ -12,11 +12,6 @@
       "static/css/app/(admin)/layout.css",
       "static/chunks/app/(admin)/layout.js"
     ],
-    "/(admin)/settings/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/settings/page.js"
-    ],
     "/(admin)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -27,31 +22,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/(public)/layout.js"
     ],
-    "/(public)/not-authorized/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(public)/not-authorized/page.js"
-    ],
     "/(public)/login/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/(public)/login/page.js"
-    ],
-    "/(admin)/users/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(admin)/users/page.css",
-      "static/chunks/app/(admin)/users/page.js"
-    ],
-    "/(admin)/flagged/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(admin)/flagged/page.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

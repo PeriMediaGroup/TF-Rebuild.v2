@@ -6,6 +6,16 @@
   color: var(--tf-text);
   display: flex;
   flex-direction: column;
+  &__content {
+    &--ghost {
+      flex: 1 1 300px;
+      background: var(--tf-light-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--tf-light-bg-border);
+      box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.45);
+    }
+  }
 }
 
 .tf-page__header {

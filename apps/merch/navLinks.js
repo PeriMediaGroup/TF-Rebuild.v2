@@ -1,6 +1,5 @@
 export const navLinks = [
-  { href: "/", label: "Merch" },
-  { href: "/triggerfeed", label: "TriggerFeed" },
-  { href: "/shirts", label: "Shirts" },
-  { href: "/other", label: "Other" }
+  { href: "/", label: "Home" },
+  { href: "http://triggerfeed.com", label: "TriggerFeed" },
+  { href: "http://app.triggerfeed.com", label: "Feed" },
 ];

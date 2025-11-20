@@ -94,26 +94,16 @@ const Nav = () => {
         )}
 
         <li>
+          <Link to="/members">Members</Link>
+        </li>
+        <li>
           <Link to="https://triggerfeed.com/">TriggerFeed Website</Link>
         </li>
         <li>
           <Link to="https://merch.triggerfeed.com/">Merch Store</Link>
         </li>
         <li>
-          <Link to="/about">About TriggerFeed</Link>
-        </li>
-        <li>
-          <Link to="/members">Members</Link>
-        </li>
-
-        <li>
-          <Link to="/install">Install Guide</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-        <li>
-          <Link to="/privacy">Privacy</Link>
+          <Link to="https://triggerfeed.com/contact">Contact Us</Link>
         </li>
         {user && (profile?.role === "admin" || profile?.role === "ceo") && (
           <li>

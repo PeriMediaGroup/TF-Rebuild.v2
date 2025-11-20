@@ -13,7 +13,7 @@ export default function InstallPage() {
       <div className="tf-install__columns">
 
         {/* ANDROID COLUMN */}
-        <div className="tf-install__col">
+        <div className="tf-install__col tf-page__content--ghost">
           <h2>Android</h2>
 
           <p className="tf-install__sub">Option 1: Install Through Google Play</p>
@@ -35,7 +35,7 @@ export default function InstallPage() {
 
 
         {/* IOS COLUMN */}
-        <div className="tf-install__col">
+        <div className="tf-install__col tf-page__content--ghost">
           <h2>iPhone (iOS)</h2>
 
           <p className="tf-install__sub">Install the Web App</p>
@@ -56,7 +56,7 @@ export default function InstallPage() {
 
 
       {/* DESKTOP SECTION */}
-      <div className="tf-install__desktop">
+      <div className="tf-install__desktop tf-page__content--ghost">
         <h2>Desktop</h2>
         <p>
           You can access TriggerFeed on any computer by visiting:
