@@ -5,12 +5,12 @@
   flex-direction: column;
   gap: 0.5rem;
   align-items: flex-start;
-  background-color: var(--background-main);
+  background-color: var(--tf-gunmetal);
   font-size: 0.75rem;
   color: white;
   z-index: 2500;
   padding: 0.75rem 1rem;
-  border-top: 1px solid var(--surface-dark);
+  border-top: 1px solid var(--tf-crimson);
 
   &__copyright {
     margin: 0;

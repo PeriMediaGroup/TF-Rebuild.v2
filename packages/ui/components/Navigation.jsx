@@ -1,12 +1,20 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-export default function Navigation({ links = [] }) {
-  const pathname = usePathname();
+export default function Navigation({
+  links = [],
+  LinkComponent = "a",
+  currentPath = "/"
+}) {
   const [open, setOpen] = useState(false);
+
+  const isActive = (href) => {
+    return (
+      currentPath === href ||
+      (href !== "/" && currentPath.startsWith(href))
+    );
+  };
 
   return (
     <div className="tf-nav-wrapper">
@@ -23,41 +31,29 @@ export default function Navigation({ links = [] }) {
 
       {/* Desktop Nav */}
       <nav className="tf-nav tf-nav--desktop">
-        {links.map((item) => {
-          const isActive =
-            pathname === item.href ||
-            (item.href !== "/" && pathname.startsWith(item.href));
-
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={isActive ? "active" : ""}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
+        {links.map((item) => (
+          <LinkComponent
+            key={item.href}
+            href={item.href}
+            className={isActive(item.href) ? "active" : ""}
+          >
+            {item.label}
+          </LinkComponent>
+        ))}
       </nav>
 
       {/* Mobile Nav */}
       <nav className={`tf-nav tf-nav--mobile ${open ? "open" : ""}`}>
-        {links.map((item) => {
-          const isActive =
-            pathname === item.href ||
-            (item.href !== "/" && pathname.startsWith(item.href));
-
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={isActive ? "active" : ""}
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          );
-        })}
+        {links.map((item) => (
+          <LinkComponent
+            key={item.href}
+            href={item.href}
+            className={isActive(item.href) ? "active" : ""}
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+          </LinkComponent>
+        ))}
       </nav>
     </div>
   );

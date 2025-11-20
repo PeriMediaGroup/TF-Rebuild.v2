@@ -11,8 +11,8 @@
   border-radius: 5px;
   padding: 0.5rem;
   margin: 0 0.2rem 0.5rem 0.2rem;
-  background: var(--surface-dark);
-  box-shadow: 1px 1px 4px rgba(255, 255, 255, 0.45);
+  background: var(--tf-light-bg);
+  border: var(--tf-light-bg-border);
 }
 
 .post-card__title-block {

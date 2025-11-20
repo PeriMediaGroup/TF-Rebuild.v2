@@ -1,6 +1,8 @@
+import "../../styles/sections/contact.scss"
+
 export default function ContactPage() {
   return (
-    <div className="tf-page__content page contact-page">
+    <div className="tf-page__content contact-page">
       <h1>Contact Us</h1>
 
       <p>Have a question? Found a bug? Want to yell at us? Go for it.</p>

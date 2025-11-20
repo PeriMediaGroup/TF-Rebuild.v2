@@ -10,6 +10,8 @@ export default defineConfig({
   resolve: {
     dedupe: ["react", "react-dom"],
     alias: {
+      "@triggerfeed/ui": path.resolve(__dirname, "../../packages/ui"),
+      "@triggerfeed/theme": path.resolve(__dirname, "../../packages/theme"),
       "@triggerfeed": path.resolve(__dirname, "../../"),
     },
   },

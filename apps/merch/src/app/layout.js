@@ -1,5 +1,5 @@
 import "@triggerfeed/theme/scss/global.scss";
-import { tomorrow } from "@triggerfeed/theme";
+import { tomorrow, blackOpsOne } from "@triggerfeed/theme/next";
 import { Header, Footer } from "@triggerfeed/ui";
 import { navLinks } from "../../navLinks";
 

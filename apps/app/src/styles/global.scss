@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --background-main: #142027;
+  --background-main: var(--tf-crimson);
   --primary-text-color: #f0f0f0; // Light text
   --secondary-text-color: var(--border-color) ccc; // Slightly dimmer
   --accent-gray: var(--text-subtle) 888; // Timestamps / metadata
@@ -34,7 +34,7 @@
 
   --epr-header-padding: 0.25em;
 
-  --header-height: 80px;
+  --header-height: 87px;
   --footer-height: 45px;
   --header-footer-total-height: calc(var(--header-height) + var(--footer-height));
   --content-height: calc(98vh - var(--header-footer-total-height));
