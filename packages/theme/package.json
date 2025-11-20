@@ -10,7 +10,8 @@
   ],
   "exports": {
     ".": "./index.js",
-    "./index": "./index.js",
+    "./next": "./fonts-next.js",
+    "./raw": "./fonts-raw.js",
     "./scss/*": "./scss/*",
     "./fonts/*": "./fonts/*"
   }

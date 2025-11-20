@@ -7,6 +7,8 @@ import App from "./App";
 import { AuthProvider } from "./auth/AuthContext";
 import { NotificationProvider } from "./auth/NotificationContext";
 import { MessageProvider } from "./components/messages/MessageContext";
+import "@triggerfeed/theme/fonts-raw";
+import "@triggerfeed/theme/scss/global.scss";
 import "./styles/global.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

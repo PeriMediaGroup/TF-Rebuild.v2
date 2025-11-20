@@ -12,6 +12,7 @@ import {
   Merch,
   Contact,
 } from "./pages";
+import "@triggerfeed/theme/scss/global.scss";
 import { Header, Footer } from "./components/layout";
 import {
   PrivateRoute,

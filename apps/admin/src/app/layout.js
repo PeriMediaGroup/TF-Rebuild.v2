@@ -1,7 +1,7 @@
 /* app/layout.js */
 
 import "@triggerfeed/theme/scss/global.scss";
-import { tomorrow, blackOpsOne } from "@triggerfeed/theme";
+import { tomorrow, blackOpsOne } from "@triggerfeed/theme/next";
 import { AuthProvider } from "../auth/AuthContext";
 
 export const metadata = {

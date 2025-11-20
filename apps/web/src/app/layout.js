@@ -1,7 +1,7 @@
 import "@triggerfeed/theme/scss/global.scss";
-import { tomorrow, blackOpsOne } from "@triggerfeed/theme";
+import { tomorrow, blackOpsOne } from "@triggerfeed/theme/next";
 import { Header, Footer } from "@triggerfeed/ui";
-import { navLinks } from "../../navLinks";
+import NavWrapper from "./NavWrapper";
 import "../styles/pages.scss";
 import "../styles/sections/legal.scss";
 
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${tomorrow.variable} ${blackOpsOne.variable}`}>
-        <Header links={navLinks} />
+        <NavWrapper />
         <main className="tf-page">{children}</main>
         <Footer />
       </body>
