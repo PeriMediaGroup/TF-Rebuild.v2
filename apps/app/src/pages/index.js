@@ -1,5 +1,4 @@
 export { default as HomePage } from "./HomePage";
-export { default as Contact } from "./Contact";
 export { default as InstallGuide } from "./InstallGuide";
 export { default as LoginPage } from "./LoginPage";
 export { default as Members } from "./Members";
