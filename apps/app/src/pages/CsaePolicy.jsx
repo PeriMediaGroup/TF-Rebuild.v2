@@ -1,4 +1,3 @@
-import "../styles/privacy.scss";
 import { ReportForm } from "../components/common";
 
 const CsaePolicy = () => {
