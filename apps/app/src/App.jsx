@@ -4,13 +4,8 @@ import {
   LoginPage,
   HomePage,
   NotFoundPage,
-  PrivacyPolicy,
   CsaePolicy,
-  InstallGuide,
   Members,
-  About,
-  Merch,
-  Contact,
 } from "./pages";
 import "@triggerfeed/theme/scss/global.scss";
 import { Header, Footer } from "./components/layout";
@@ -47,8 +42,6 @@ const App = () => {
         <Routes>
           <Route path="/verify-email" element={<EmailConfirmation />} />
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route
@@ -112,11 +105,9 @@ const App = () => {
               </PrivateRoute>
             }
           />
-          <Route path="/install" element={<InstallGuide />} />
           <Route path="/members" element={<Members />} />
           <Route path="*" element={<NotFoundPage />} />
           <Route path="/edit/:id" element={<EditPost />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/csae" element={<CsaePolicy />} />
           <Route path="/users" element={<UserList />} />
           <Route path="/notifications" element={<NotificationPanel />} />
@@ -128,7 +119,6 @@ const App = () => {
             path="/fullscreenimagemodal"
             element={<FullscreenImageModal />}
           />
-          <Route path="/merch" element={<Merch />} />
         </Routes>
       </div>
       <Footer />
