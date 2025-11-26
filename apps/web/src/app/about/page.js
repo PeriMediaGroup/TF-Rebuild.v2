@@ -4,13 +4,10 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="tf-about tf-page__content">
-
       <h1>About TriggerFeed</h1>
-
       <div className="tf-about__columns">
-
         {/* LEFT COLUMN */}
-        <div className="tf-about__col tf-about__col--main">
+        <div className="tf-about__col tf-about__col--main  tf-page__content--ghost">
           <p>
             TriggerFeed is a social platform built for the 2A community — shooters,
             collectors, creators, builders, competitors, and defenders of the Constitution.
@@ -18,12 +15,12 @@ export default function AboutPage() {
 
           <p>
             We’re not “censorship-free,” but we are **censorship-resistant**. That means:</p>
-            <ul className="tf-about__list">
-              <li>We don’t shadowban lawful firearms content.</li>
-              <li>We don’t punish creators for photos of gear, builds, ranges, or training.<br/>Got full-auto - Let's Go!!!</li>
-              <li>We don’t silence normal conversations about the 2A lifestyle, but we also don't push politics.</li>
-            </ul>
-           <p>But we **do** enforce basic community standards — no hate speech, no illegal activity,
+          <ul className="tf-about__list">
+            <li>We don’t shadowban lawful firearms content.</li>
+            <li>We don’t punish creators for photos of gear, builds, ranges, or training.<br />Got full-auto - Let's Go!!!</li>
+            <li>We don’t silence normal conversations about the 2A lifestyle, but we also don't push politics.</li>
+          </ul>
+          <p>But we **do** enforce basic community standards — no hate speech, no illegal activity,
             no harassment, no extremist garbage, and zero tolerance for CSAE or exploitation.
           </p>
 
@@ -57,7 +54,7 @@ export default function AboutPage() {
 
         {/* RIGHT COLUMN */}
         <div className="tf-about__col tf-about__col--support">
-          <h2>🌟 Why Support TriggerFeed?</h2>
+          <h4>🌟 Why Support TriggerFeed?</h4>
 
           <p>
             TriggerFeed is independently owned and operated — no big tech overlords,

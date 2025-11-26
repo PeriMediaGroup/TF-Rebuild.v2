@@ -1,7 +1,7 @@
 export default function Logo() {
   return (
     <div className="tf-logo">
-      <a href="/" className="tf-logo__text">TriggerFeed</a>
+      <span className="tf-logo__text">TriggerFeed</span>
     </div>
   );
 }

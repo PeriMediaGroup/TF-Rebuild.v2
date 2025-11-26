@@ -5,9 +5,8 @@ export default function HomePage() {
     <div className="tf-home tf-page__content">
 
       {/* HERO */}
-      <section className="tf-home__hero">
-        <h1 className="tf-home__title">TriggerFeed</h1>
-        <p className="tf-home__tagline">Post With The Safety Off.</p>
+      <section className="tf-home__hero tf-page__content--ghost">
+        <h1 className="tf-home__title">Post With The Safety Off.</h1>
 
         <p className="tf-home__sub">
           The home for shooters, builders, creators and collectors tired of censorship.
@@ -45,7 +44,7 @@ export default function HomePage() {
 
 
       {/* APP PREVIEW */}
-      <section className="tf-home__preview">
+      <section className="tf-home__preview tf-page__content--ghost">
         <h2>Inside the App</h2>
 
         <div className="preview-grid">
@@ -73,7 +72,7 @@ export default function HomePage() {
 
 
       {/* SAFETY + LEGAL */}
-      <section className="tf-home__legal">
+      <section className="tf-home__legal tf-page__content--ghost">
         <h2>Our Commitment to Safety</h2>
         <p>
           TriggerFeed has zero tolerance for illegal content or exploitation.  

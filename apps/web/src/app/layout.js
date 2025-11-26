@@ -1,7 +1,8 @@
 import "@triggerfeed/theme/scss/global.scss";
 import { tomorrow, blackOpsOne } from "@triggerfeed/theme/next";
+import { headers } from "next/headers";
 import { Header, Footer } from "@triggerfeed/ui";
-import NavWrapper from "./NavWrapper";
+import { navLinks } from "../../navLinks";
 import "../styles/pages.scss";
 import "../styles/sections/legal.scss";
 
@@ -10,11 +11,13 @@ export const metadata = {
   description: "TriggerFeed - 2A your way!  Post with the safety off."
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const headerList = await headers();
+  const pathname = headerList.get("x-invoke-path") || "/";
   return (
     <html lang="en">
       <body className={`${tomorrow.variable} ${blackOpsOne.variable}`}>
-        <NavWrapper />
+        <Header links={navLinks} currentPath={pathname} />
         <main className="tf-page">{children}</main>
         <Footer />
       </body>
