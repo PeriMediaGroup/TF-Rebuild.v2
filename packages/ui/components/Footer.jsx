@@ -8,7 +8,7 @@ export default function Footer() {
         </a>
       </span>
       <span>
-        <a href="/legal" className="footer-legal">
+        <a href="https://triggerfeed.com/legal" className="footer-legal">
           Legal Stuff
         </a>
       </span>

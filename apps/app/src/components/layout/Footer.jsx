@@ -11,9 +11,9 @@ const Footer = () => {
       </p>
 
       <div className="footer__links" aria-label="Site policies and safety">
-        <Link to="/privacy">Privacy</Link>
-        <Link to="/csae">CSAE Policy</Link>
-        <a href="mailto:abuse@triggerfeed.com">Report Abuse</a>
+        <a href="https://triggerfeed.com/legal" className="footer-legal">
+          Legal Stuff
+        </a>
       </div>
 
       {/* 
