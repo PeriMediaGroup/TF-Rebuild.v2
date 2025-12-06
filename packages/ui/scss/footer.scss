@@ -1,4 +1,6 @@
 .tf-footer {
+  display: flex;
+  justify-content: space-between;
   font-family: var(--font-tomorrow), sans-serif;
   background: var(--tf-gunmetal);
   padding: 1rem;
@@ -7,4 +9,8 @@
   p {
     margin-bottom: 0;
   }
+}
+
+.footer-legal {
+  margin-left: auto;
 }
