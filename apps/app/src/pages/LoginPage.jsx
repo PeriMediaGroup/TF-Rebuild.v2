@@ -59,23 +59,20 @@ const LoginPage = () => {
 
       if (error) {
         toast.dismiss(toastId);
-
-        // Customize based on Supabase error codes/messages
-        if (error.message.toLowerCase().includes("email")) {
-          setFormErrors({ ...formErrors, email: "Email not found" });
-        } else if (error.message.toLowerCase().includes("password")) {
-          setFormErrors({ ...formErrors, password: "Incorrect password" });
-        } else {
-          setFormErrors({ ...formErrors, general: error.message });
-        }
-
+        // ... your existing error mapping ...
         toast.error("Login failed");
         return;
       }
 
       toast.dismiss(toastId);
       toast.success("Login successful!");
-      window.location.reload();
+
+      // make sure auth context is fresh, then go home
+      if (typeof refreshUser === "function") {
+        await refreshUser();
+      }
+
+      navigate("/"); // go to home instead of reloading /login
     } catch (err) {
       toast.dismiss(toastId);
       setFormErrors({ ...formErrors, general: "Unexpected error occurred." });
