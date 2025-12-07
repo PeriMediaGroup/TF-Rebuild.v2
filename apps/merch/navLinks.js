@@ -1,4 +1,4 @@
 export const navLinks = [
-  { href: "/", label: "Home" },
+  { href: "http://triggerfeed.com", label: "Home"},
   { href: "http://app.triggerfeed.com", label: "Feed" },
 ];
