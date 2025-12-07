@@ -4,4 +4,5 @@ export const navLinks = [
   { href: "/install", label: "Install Guide" },
   { href: "https://merch.triggerfeed.com", label: "Merch" },
   { href: "/contact", label: "Contact" },
+  { href: "http://app.triggerfeed.com", label: "Feed" },
 ];

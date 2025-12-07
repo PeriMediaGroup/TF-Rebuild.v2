@@ -96,7 +96,6 @@ const Nav = () => {
         <li>
           <Link to="/members">Members</Link>
         </li>
-        {/*
         <li>
           <Link to="https://triggerfeed.com/">TriggerFeed Website</Link>
         </li>
@@ -106,7 +105,6 @@ const Nav = () => {
         <li>
           <Link to="https://triggerfeed.com/contact">Contact Us</Link>
         </li>
-        */}
         {user && (profile?.role === "admin" || profile?.role === "ceo") && (
           <li>
             <Link to="/admin">Admin Dashboard</Link>
