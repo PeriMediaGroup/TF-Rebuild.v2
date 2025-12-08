@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../auth/AuthContext";
 import supabase from "../utils/supabaseClient";
-import { signInWithProvider } from "../utils/supabaseHelpers";
 import { TextInput } from "../components/common";
 import "../styles/login-signup.scss";
 
@@ -77,15 +76,6 @@ const LoginPage = () => {
       toast.dismiss(toastId);
       setFormErrors({ ...formErrors, general: "Unexpected error occurred." });
       toast.error("Unexpected login error.");
-    }
-  };
-
-  const handleOAuthLogin = async (provider) => {
-    const { success, error } = await signInWithProvider(provider);
-    if (!success) {
-      toast.error(`OAuth Login Failed: ${error}`);
-    } else {
-      setPendingLogin(true);
     }
   };
 
