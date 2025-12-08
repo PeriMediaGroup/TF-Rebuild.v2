@@ -182,13 +182,6 @@ const SignupPage = () => {
     }
   };
 
-  const handleOAuthLogin = async (provider) => {
-    const { success, error } = await signInWithProvider(provider);
-    if (!success) {
-      toast.error(`OAuth Login Failed: ${error}`);
-    }
-  };
-
   return (
     <div className="signup">
       <h2 className="signup__title">Join TriggerFeed</h2>

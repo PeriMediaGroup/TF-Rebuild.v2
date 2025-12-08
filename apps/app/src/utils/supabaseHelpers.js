@@ -14,22 +14,6 @@ export const signUp = async (email, password, navigate) => {
   return { success: true };
 };
 
-export const signInWithProvider = async (provider) => {
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider, // 'google' or 'facebook'
-    options: {
-      redirectTo: window.location.origin, // or custom redirect URI
-    },
-  });
-
-  if (error) {
-    toast.error("OAuth login error:", error.message);
-    return { success: false, error: error.message };
-  }
-
-  return { success: true, data };
-};
-
 export const logIn = async (email, password) => {
   const { data, error } = await supabase.auth.signInWithPassword({ email, password });
 
