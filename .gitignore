@@ -1,7 +1,7 @@
 node_modules
+/supabase/.temp
 # Next.js build output
 .next/
 dist/
 out/
 .vercel/
-/supabase/.temp
