@@ -1,5 +1,5 @@
 {
-  "name": "triggerfeed-web",
+  "name": "@triggerfeed/app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
