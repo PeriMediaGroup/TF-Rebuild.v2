@@ -26,15 +26,26 @@ export default function ContactPage() {
 
     try {
       // TODO: point this to your actual handler (Edge Function / API route / etc.)
-      const res = await fetch("/api/contact", {
+      const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/contact`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
         body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
-        const text = await res.text().catch(() => "");
-        throw new Error(text || `Request failed (${res.status})`);
+        const contentType = res.headers.get("content-type") || "";
+        const errBody = contentType.includes("application/json")
+          ? JSON.stringify(await res.json().catch(() => ({})))
+          : (await res.text().catch(() => "")).slice(0, 300); // keep it sane
+
+        throw new Error(errBody || `Request failed (${res.status})`);
       }
 
       e.currentTarget.reset();
