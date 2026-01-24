@@ -8,10 +8,12 @@ export default function ContactPage() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    const form = e.currentTarget;
+    if (form instanceof HTMLFormElement) form.reset();
     setStatus({ type: "", msg: "" });
     setIsSending(true);
 
-    const form = new FormData(e.currentTarget);
+    form = new FormData(e.currentTarget);
     const payload = {
       name: (form.get("name") || "").toString().trim(),
       email: (form.get("email") || "").toString().trim(),
