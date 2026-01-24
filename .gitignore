@@ -4,4 +4,4 @@ node_modules
 dist/
 out/
 .vercel/
-supabase/.temp/
+/supabase/.temp
