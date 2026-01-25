@@ -103,14 +103,13 @@ const LoginPage = () => {
         />
         <p className="form-field__error">
           {formErrors.general && <span>{formErrors.general}</span>}
-          &nbsp;&nbsp;
-          <button
-            type="button"
-            onClick={() => handleForgotPassword(formData.email)}
-          >
-            Forgot your password?
-          </button>
         </p>
+        <button
+          type="button"
+          onClick={() => handleForgotPassword(formData.email)}
+        >
+          Forgot your password?
+        </button>
         <button type="submit" className="form-field__button">
           Log In
         </button>

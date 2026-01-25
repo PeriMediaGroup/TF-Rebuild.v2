@@ -1,6 +1,6 @@
 export { default as HomePage } from "./HomePage";
 export { default as LoginPage } from "./LoginPage";
-export { default as ResetPage } from "./ResetPasswordPage";
+export { default as ResetPasswordPage } from "./ResetPasswordPage";
 export { default as Members } from "./Members";
 export { default as NotFoundPage } from "./NotFoundPage";
 export { default as CsaePolicy } from "./CsaePolicy";
