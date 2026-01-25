@@ -108,7 +108,6 @@ const App = () => {
             }
           />
           <Route path="/members" element={<Members />} />
-          <Route path="*" element={<NotFoundPage />} />
           <Route path="/edit/:id" element={<EditPost />} />
           <Route path="/csae" element={<CsaePolicy />} />
           <Route path="/users" element={<UserList />} />
@@ -121,6 +120,7 @@ const App = () => {
             path="/fullscreenimagemodal"
             element={<FullscreenImageModal />}
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
       <Footer />
