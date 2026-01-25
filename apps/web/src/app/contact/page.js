@@ -6,60 +6,64 @@ export default function ContactPage() {
   const [status, setStatus] = useState({ type: "", msg: "" });
   const [isSending, setIsSending] = useState(false);
 
-async function handleSubmit(e) {
-  e.preventDefault();
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setStatus({ type: "", msg: "" });
+    setIsSending(true);
 
-  const formEl = e.currentTarget; // keep a stable reference
-  setStatus({ type: "", msg: "" });
-  setIsSending(true);
+    const formEl = e.currentTarget;
+    const formData = new FormData(formEl);
 
-  const fd = new FormData(formEl);
-  const payload = {
-    name: (fd.get("name") || "").toString().trim(),
-    email: (fd.get("email") || "").toString().trim(),
-    message: (fd.get("message") || "").toString().trim(),
-  };
+    const payload = {
+      name: (formData.get("name") || "").toString().trim(),
+      email: (formData.get("email") || "").toString().trim(),
+      message: (formData.get("message") || "").toString().trim(),
+    };
 
-  if (!payload.name || !payload.email || !payload.message) {
-    setIsSending(false);
-    setStatus({ type: "error", msg: "Please fill out name, email, and message." });
-    return;
-  }
-
-  try {
-    const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-    if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
-      throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY");
+    if (!payload.name || !payload.email || !payload.message) {
+      setIsSending(false);
+      setStatus({ type: "error", msg: "Please fill out name, email, and message." });
+      return;
     }
 
-    const res = await fetch(`${SUPABASE_URL}/functions/v1/contact`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: SUPABASE_ANON_KEY,
-        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
-      },
-      body: JSON.stringify(payload),
-    });
+    try {
+      const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-    const contentType = res.headers.get("content-type") || "";
-    const data = contentType.includes("application/json")
-      ? await res.json().catch(() => ({}))
-      : { error: await res.text().catch(() => "") };
+      if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
+        throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY");
+      }
 
-    if (!res.ok) throw new Error(data?.error || `Request failed (${res.status})`);
+      const res = await fetch(`${SUPABASE_URL}/functions/v1/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: SUPABASE_ANON_KEY,
+          Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(payload),
+      });
 
-    if (formEl instanceof HTMLFormElement) formEl.reset();
-    setStatus({ type: "success", msg: `Message sent. Ref: ${data?.id || "ok"}` });
-  } catch (err) {
-    setStatus({ type: "error", msg: `Couldn’t send message. ${err?.message || ""}` });
-  } finally {
-    setIsSending(false);
+      if (!res.ok) {
+        const contentType = res.headers.get("content-type") || "";
+        const errBody = contentType.includes("application/json")
+          ? JSON.stringify(await res.json().catch(() => ({})))
+          : (await res.text().catch(() => "")).slice(0, 300);
+
+        throw new Error(errBody || `Request failed (${res.status})`);
+      }
+
+      formEl.reset();
+      setStatus({ type: "success", msg: "Message sent. If we like you, we’ll reply." });
+    } catch (err) {
+      setStatus({
+        type: "error",
+        msg: `Couldn’t send message. ${err?.message || "Try again later."}`,
+      });
+    } finally {
+      setIsSending(false);
+    }
   }
-}
-
 
   return (
     <div className="tf-page__content contact-page">
