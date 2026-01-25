@@ -35,7 +35,7 @@ const LoginPage = () => {
     }
 
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${import.meta.env.VITE_APP_URL}/reset-password`,
+      redirectTo: `https://app.triggerfeed.com/reset-password`,
     });
 
     if (error) {
@@ -106,7 +106,6 @@ const LoginPage = () => {
           &nbsp;&nbsp;
           <button
             type="button"
-            className="form-field__forgot"
             onClick={() => handleForgotPassword(formData.email)}
           >
             Forgot your password?
