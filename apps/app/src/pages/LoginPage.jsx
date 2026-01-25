@@ -35,7 +35,7 @@ const LoginPage = () => {
     }
 
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: window.location.origin + "/reset-password",
+      redirectTo: `${import.meta.env.VITE_APP_URL}/reset-password`,
     });
 
     if (error) {
@@ -101,19 +101,17 @@ const LoginPage = () => {
           value={formData.password}
           onChange={handleChange}
         />
-        {formErrors.general && (
-          <p className="form-field__error">
-            {formErrors.general}
-            &nbsp; &nbsp;
-            <span
-              className="form-field__forgot"
-              type="button"
-              onClick={() => handleForgotPassword(formData.email)}
-            >
-              Forgot your password?
-            </span>
-          </p>
-        )}
+        <p className="form-field__error">
+          {formErrors.general && <span>{formErrors.general}</span>}
+          &nbsp;&nbsp;
+          <button
+            type="button"
+            className="form-field__forgot"
+            onClick={() => handleForgotPassword(formData.email)}
+          >
+            Forgot your password?
+          </button>
+        </p>
         <button type="submit" className="form-field__button">
           Log In
         </button>

@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import {
   SignupPage,
   LoginPage,
+  ResetPasswordPage,
   HomePage,
   NotFoundPage,
   CsaePolicy,
